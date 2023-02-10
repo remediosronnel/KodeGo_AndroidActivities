@@ -2,6 +2,6 @@ package com.remedy.android_activities
 
 fun main(){
 
-print()
+print("Hello")
 
 }
