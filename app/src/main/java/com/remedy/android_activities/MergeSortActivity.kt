@@ -1,5 +1,6 @@
 package com.remedy.android_activities
 
+import kotlinx.coroutines.internal.artificialFrame
 
 
 //Merge Sort: Write a program that implements the merge sort algorithm.
@@ -15,7 +16,7 @@ fun main(args: Array<String>) {
     val numbers1 = mutableListOf<Int>(8,10,15, 1, 2, 7, 12, 6)
     val number2 = mutableListOf<Int>(6, 3, 9, 4, 5, 20, 11)
     val numberS = mergeArrays(numbers1, number2)
-    val sortedList = mergeSort(numberS)
+    val sortedList = divideConquer(numberS)
     println("Sorted: $sortedList")
 }
 fun mergeArrays(array1: List<Int>, array2:List<Int>): List<Int> {
@@ -23,7 +24,7 @@ fun mergeArrays(array1: List<Int>, array2:List<Int>): List<Int> {
     return arrayS
 }
 
-fun mergeSort(list: List<Int>): List<Int> {
+fun divideConquer(list: List<Int>): List<Int> {
     if (list.size <= 1) {
         return list
     }
@@ -32,7 +33,7 @@ fun mergeSort(list: List<Int>): List<Int> {
     var left = list.subList(0,middle);
     var right = list.subList(middle,list.size);
 
-    return merge(mergeSort(left), mergeSort(right))
+    return merge(divideConquer(left), divideConquer(right))
 }
 
 fun merge(left: List<Int>, right: List<Int>): List<Int>  {
@@ -53,6 +54,12 @@ fun merge(left: List<Int>, right: List<Int>): List<Int>  {
 //        newList.add(left[indexLeft])
 //
 //    }
+
+////    do {
+////
+////        newList.add(left[indexLeft])
+////        indexLeft++
+//    }while (indexLeft< left.size)
     while (indexLeft < left.size) {
         newList.add(left[indexLeft])
         indexLeft++
