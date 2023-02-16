@@ -1,6 +1,5 @@
 package com.remedy.android_activities
 
-import kotlinx.coroutines.internal.artificialFrame
 
 
 //Merge Sort: Write a program that implements the merge sort algorithm.
@@ -11,6 +10,9 @@ import kotlinx.coroutines.internal.artificialFrame
 //Create a helper function to merge two sorted arrays
 //Use the helper function to sort the input array
 //Print the sorted array.
+
+
+//ACTIVITY 1
 
 fun main(args: Array<String>) {
     val numbers1 = mutableListOf<Int>(8,10,15, 1, 2, 7, 12, 6)
