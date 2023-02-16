@@ -34,9 +34,9 @@ fun bookAdded(titleBook: ArrayList<String>, authorBook: ArrayList<String>,public
                publicationBook.add(bookYearString)
            }
            "Remove" -> {
-               print("Catalog List: ")
+               print("Catalog List: \n")
                titleBook.forEachIndexed{ index, bookTitle ->
-                println("${index + 1}. $bookTitle ${authorBook[index]} ${publicationBook[index]} ")
+                println("${index + 1}. $bookTitle - ${authorBook[index]} - ${publicationBook[index]} ")
 
                }
                println("Select an index to remove: ")
@@ -54,8 +54,7 @@ fun bookAdded(titleBook: ArrayList<String>, authorBook: ArrayList<String>,public
            "Display" ->{
                titleBook.forEachIndexed { index, bookTitle ->
 
-                       println("${index + 1}. $bookTitle ${authorBook[index]} ${publicationBook[index]}")
-
+                       println("${index + 1}. $bookTitle - ${authorBook[index]} - ${publicationBook[index]}")
 
            }}
            "Exit" -> {
