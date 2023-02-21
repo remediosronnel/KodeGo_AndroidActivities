@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
         var str2 = phoneNumber.substring(3, 6)
         var str3 = phoneNumber.substring(6, 10)
         var concaString = "($str1) $str2-$str3"
-        var concaString1 = "(+63$str1) $str2$str3"
+        var concaString1 = "(+63$str1) $str2-$str3"
         println(concaString); print(concaString1)
     }else{
         print("Invalid")
